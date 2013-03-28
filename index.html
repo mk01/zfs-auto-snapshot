@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Zfs-auto-snapshot by mk01</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Zfs-auto-snapshot</h1>
+        <p>ZFS Snapshot Service for Linux and Macosx with send and receive</p>
+
+        <p class="view"><a href="https://github.com/mk01/zfs-auto-snapshot">View the Project on GitHub <small>mk01/zfs-auto-snapshot</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/mk01/zfs-auto-snapshot/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mk01/zfs-auto-snapshot/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mk01/zfs-auto-snapshot">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>zfs-auto-snapshot:</p>
+
+<p>An alternative implementation of the zfs-auto-snapshot service for Linux
+and Macosx (currently tested and compatible with ZEVO Community Edition).</p>
+
+<p>It can automatically create, rotate, and destroy periodic ZFS snapshots. This
+is utility that creates the @zfs-auto-snap_frequent, @zfs-auto-snap_hourly,
+@zfs-auto-snap_daily, @zfs-auto-snap_weekly, and @zfs-auto-snap_monthly
+snapshots if it is installed.</p>
+
+<p>It can backup (send) the snapshots to remote systems or external disks,
+utilizing zfs send command. On darwin this can replace TimeMachine backups,
+currently not running on top of ZFS filesystems.</p>
+
+<p>This program is a posixly correct bourne shell script. It depends on zfs utilities
+only (Linux). Unfortunatelly on Darwin it needs 'getopt' from macports.</p>
+
+<p>For using --send option, adapt opt_sendtocmd variable accordingly by editing the
+script zfs-auto-snapshot.sh.</p>
+
+<pre><code>sudo make OSTYPE=linux|darwin install
+
+installs cron / launchd startup scripts and copies script to /usr/sbin
+</code></pre>
+
+<p>directory.</p>
+
+<pre><code>On darwin for daily, weekly and monthly stuff, anacron install is highly
+</code></pre>
+
+<p>recommended.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/mk01">mk01</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
