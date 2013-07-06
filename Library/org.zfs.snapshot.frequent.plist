@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>org.zfs.snapshot.hourly</string>
+	<string>org.zfs.snapshot.frequent</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/sbin/zfs-auto-snapshot.sh</string>
 		<string>--syslog</string>
 		<string>--quiet</string>
-		<string>--keep=24</string>
-		<string>--label=hourly</string>
+		<string>--keep=4</string>
+		<string>--label=frequent</string>
 		<string>//</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StartInterval</key>
-	<integer>3600</integer>
+	<integer>900</integer>
 </dict>
 </plist>
