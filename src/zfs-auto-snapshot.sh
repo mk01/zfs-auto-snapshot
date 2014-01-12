@@ -1126,10 +1126,10 @@ then
 	PLATFORM_REM=$(eval "$opt_sendtocmd" "uname")
 
 	case "$PLATFORM_REM" in 
-		(Linux|Darwin)
+		(Linux|Darwin|SunOS|FreeBSD)
 			;;
 		(*)
-			print_log error "Remote system not known ($PLATFORM_REM) - needs one of Darwin, Linux. Exiting."
+			print_log error "Remote system not known ($PLATFORM_REM) - needs one of Darwin, Linux, SunOS, FreeBSD. Exiting."
 			exit 301
 			;;
 	esac
